@@ -11,8 +11,14 @@ struct HijriModel:Decodable{
     let date:String
     let day:String
     let weekday:Weekday
+    let month:HijriMonth
+    let year:String
 }
 
 struct Weekday:Decodable{
+    let en:String
+}
+
+struct HijriMonth:Decodable{
     let en:String
 }

@@ -21,7 +21,9 @@ struct TimeView: View {
                         VStack(alignment:.leading){
                             Text("Dhaka, Bangladesh")
                                 .font(.title2)
-                            Text(today.date.readable)
+                            let hijriFormat = today.date.hijri
+                            let hijriDate = hijriFormat.day+" "+hijriFormat.month.en+" "+hijriFormat.year
+                            Text(today.date.readable+" | "+hijriDate)
                             
                         }
                         Spacer()
