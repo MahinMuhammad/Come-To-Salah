@@ -12,6 +12,7 @@ struct TimeView: View {
     
     var body: some View {
         if viewModel.calendar.count > 0{
+            let today = viewModel.calendar[viewModel.getToday()-1]
             ZStack {
                 Color(K.CustomColors.secondaryColor)
                     .ignoresSafeArea()
@@ -20,7 +21,7 @@ struct TimeView: View {
                         VStack(alignment:.leading){
                             Text("Dhaka, Bangladesh")
                                 .font(.title2)
-                            Text(viewModel.calendar[viewModel.getToday()].date.readable)
+                            Text(today.date.readable)
                             
                         }
                         Spacer()
@@ -32,23 +33,11 @@ struct TimeView: View {
                     .padding()
                     
                     List(0..<5){_ in
-                        HStack{
-                            VStack(alignment: .leading){
-                                Text("Asr")
-                                    .font(.title2)
-                                Text(viewModel.calendar[viewModel.getToday()].timings.Asr)
-                                    .font(.callout)
-                            }
-                            Spacer()
-                            Image(systemName: "sunrise")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 40)
-                        }
-                        .padding(.bottom)
-                        .padding(.top)
-                        .listRowBackground(Color(K.CustomColors.primaryColor))
-                        
+                        PrayerView(name: "Fajr", time: today.timings.Fajr, icon: "sun.horizon")
+                        PrayerView(name: "Dhuhr", time: today.timings.Dhuhr, icon: "sun.max")
+                        PrayerView(name: "Asr", time: today.timings.Asr, icon: "sun.haze")
+                        PrayerView(name: "Maghrib", time: today.timings.Maghrib, icon: "sunset")
+                        PrayerView(name: "Isha", time: today.timings.Isha, icon: "moon")
                     }
                     .listStyle(.plain)
                     .scrollDisabled(true)

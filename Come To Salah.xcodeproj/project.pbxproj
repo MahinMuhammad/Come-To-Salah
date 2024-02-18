@@ -19,6 +19,7 @@
 		009FFCF22B81F26A0013B44B /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FFCF12B81F26A0013B44B /* DateModel.swift */; };
 		009FFCF62B81F2EF0013B44B /* HijriModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FFCF52B81F2EF0013B44B /* HijriModel.swift */; };
 		009FFCF82B81F4F40013B44B /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FFCF72B81F4F40013B44B /* TimeViewModel.swift */; };
+		009FFCFA2B82623A0013B44B /* PrayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009FFCF92B82623A0013B44B /* PrayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		009FFCF12B81F26A0013B44B /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 		009FFCF52B81F2EF0013B44B /* HijriModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HijriModel.swift; sourceTree = "<group>"; };
 		009FFCF72B81F4F40013B44B /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
+		009FFCF92B82623A0013B44B /* PrayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				009FFCD82B80CE560013B44B /* TabBarView.swift */,
 				009FFCE52B80D60A0013B44B /* TimeView.swift */,
 				009FFCE72B80D6280013B44B /* SettingsView.swift */,
+				009FFCFB2B8262530013B44B /* Compoents */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +116,14 @@
 				009FFCF52B81F2EF0013B44B /* HijriModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		009FFCFB2B8262530013B44B /* Compoents */ = {
+			isa = PBXGroup;
+			children = (
+				009FFCF92B82623A0013B44B /* PrayerView.swift */,
+			);
+			path = Compoents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009FFCFA2B82623A0013B44B /* PrayerView.swift in Sources */,
 				009FFCF02B81EF740013B44B /* ResultModel.swift in Sources */,
 				009FFCF82B81F4F40013B44B /* TimeViewModel.swift in Sources */,
 				009FFCF22B81F26A0013B44B /* DateModel.swift in Sources */,
