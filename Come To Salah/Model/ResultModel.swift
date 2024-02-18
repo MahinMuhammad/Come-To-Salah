@@ -17,6 +17,7 @@ struct DataModel:Decodable, Identifiable{
     }
     let timings:TimingsModel
     let date:DateModel
+    let meta:MetaDataModel
 }
 
 struct TimingsModel:Decodable{
@@ -25,4 +26,8 @@ struct TimingsModel:Decodable{
     let Asr:String
     let Maghrib:String
     let Isha:String
+}
+
+struct MetaDataModel:Decodable{
+    let timezone:String
 }

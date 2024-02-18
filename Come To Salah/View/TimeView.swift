@@ -19,7 +19,7 @@ struct TimeView: View {
                 VStack{
                     HStack{
                         VStack(alignment:.leading){
-                            Text("Dhaka, Bangladesh")
+                            Text(today.meta.timezone)
                                 .font(.title2)
                             let hijriFormat = today.date.hijri
                             let hijriDate = hijriFormat.day+" "+hijriFormat.month.en+" "+hijriFormat.year

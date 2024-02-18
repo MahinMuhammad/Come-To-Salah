@@ -13,8 +13,6 @@ final class NetworkManager{
     func fetchData(year:String, month:String, source:String, lat:String, lon:String, completion: @escaping ([DataModel], Error?)->Void){
         let customUrlString = "\(urlString)\(year)/\(month)?latitude=\(lat)&longitude=\(lon)&method=\(source)"
         
-        print(customUrlString)
-        
         guard let url = URL(string: customUrlString) else{fatalError("Wrong url!")}
         
         let session = URLSession(configuration: .default)
